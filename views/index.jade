@@ -1,5 +1,10 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 Files To Be Downloaded
+  form(id="NewsAndUpdates", method="get", action="")
+    each file in files
+      li
+        a(href="/"+file)=file
+      br
+

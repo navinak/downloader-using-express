@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 
-
+app.use(express.static(path.join(__dirname , 'upload-folder')));
 
 app.get('/download', function(req, res){
   var file = __dirname + '/upload-folder/index.jpeg';
